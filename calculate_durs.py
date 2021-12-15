@@ -103,7 +103,7 @@ def main():
 
     # Iterate through all TextGrid files
     for textgrid in tqdm(textgrid_list):
-        basename = os.path.splitext(os.path.basename(textgrid))[0][5:]  # Chop off 'wavs_' prefix
+        basename = os.path.splitext(os.path.basename(textgrid))[0]#[5:]  # Chop off 'wavs_' prefix
 
         phones_mfa, tokens_mfa, durs = calculate_durations(textgrid, phone2idx)
 
